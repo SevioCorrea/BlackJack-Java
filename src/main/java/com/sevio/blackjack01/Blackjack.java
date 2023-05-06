@@ -11,7 +11,14 @@ package com.sevio.blackjack01;
 public class Blackjack {
     
     public static void main(String[] args) {
+        // Mensagem de Bem-Vindo
+        System.out.println("Bem-vindo ao Black Jack");
         
+        // Deck de jogo
+        Deck deckDeJogo = new Deck();
+        deckDeJogo.criarDeckCompleto();
+        
+        System.out.println(deckDeJogo);
     }
     
 }
