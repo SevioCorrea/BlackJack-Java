@@ -17,6 +17,7 @@ public class Blackjack {
         // Deck de jogo
         Deck deckDeJogo = new Deck();
         deckDeJogo.criarDeckCompleto();
+        deckDeJogo.embaralhar();
         
         System.out.println(deckDeJogo);
     }

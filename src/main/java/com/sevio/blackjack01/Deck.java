@@ -5,6 +5,7 @@
 package com.sevio.blackjack01;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 /**
  *
@@ -26,6 +27,23 @@ public class Deck {
                 this.cartas.add(new Carta(naipeCarta, valorCarta));
             }
         }
+    }
+    
+    public void embaralhar() {
+        // Percorrer aleatoriamente o baralho e colocar em um baralho temporário para ter ordem diferente
+        // O baralho temporário é o baralho embaralhado
+        ArrayList<Carta> tempDeck = new ArrayList<Carta>();
+        Random random = new Random();
+        int randomCardIndex = 0;
+        int tamanhoOriginal = this.cartas.size();
+        for(int i = 0; i < tamanhoOriginal; i++) {
+            // Index aleatório
+            randomCardIndex = random.nextInt((this.cartas.size()-1 - 0) + 1) + 0;
+            tempDeck.add(this.cartas.get(randomCardIndex));
+            // Removendo do Deck original
+            this.cartas.remove(randomCardIndex);
+        }
+        this.cartas = tempDeck; // Atribuindo Deck embaralhado
     }
     
     public String toString() {
