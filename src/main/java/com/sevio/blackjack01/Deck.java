@@ -46,12 +46,32 @@ public class Deck {
         this.cartas = tempDeck; // Atribuindo Deck embaralhado
     }
     
+    
+    // Getter and Setter
+    
+    public void removerCarta(int i) {
+        this.cartas.remove(i);        
+    }
+    
+    public Carta getCarta(int i) {
+        return this.cartas.get(i);
+    }
+    
+    public void addCarta(Carta addCarta) {
+        this.cartas.add(addCarta);
+    }
+    
+    // Montar o Deck
+    public void montar(Deck vindoDe) {
+        // Adicionando a Carta no baralho e removendo de onde está vindo
+        this.cartas.add(vindoDe.getCarta(0)); // Adicionando a Carta ao baralho
+        vindoDe.removerCarta(0); // Removendo a Carta de onde está vindo
+    }
+    
     public String toString() {
         String listaCartaOutput = "";
-        int i = 0; // Teste
         for(Carta arrayCarta : this.cartas) {
-            listaCartaOutput += "\n" + i + "-" + arrayCarta.toString();
-            i ++;
+            listaCartaOutput += "\n" + arrayCarta.toString();
         }
         return listaCartaOutput;
     }
