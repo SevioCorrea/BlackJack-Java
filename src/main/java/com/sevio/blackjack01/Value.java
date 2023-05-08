@@ -10,6 +10,6 @@ package com.sevio.blackjack01;
  */
 public enum Value {
     
-    DOIS, TRES, QUATRO, CINCO, SEIS, SETE, OITO, NOVE, TEN, VALETE, DAMA, REI, AS
+    DOIS, TRES, QUATRO, CINCO, SEIS, SETE, OITO, NOVE, DEZ, VALETE, DAMA, REI, AS
     
 }
