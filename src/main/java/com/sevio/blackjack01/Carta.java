@@ -15,7 +15,7 @@ public class Carta {
     
     public Carta(Naipe naipe, Value value) {  // Construtor        
         this.value = value;
-        this.naipe = naipe;        
+        this.naipe = naipe;       
     }
     
     public String toString() { // Imprimir o Naipe e o Valor
@@ -23,7 +23,7 @@ public class Carta {
     }
     
     public Value getValue() { // Checar os valores da Classe Deck para determinar quantos pontos estão na mão do Usuário        
-        return this.value;        
+        return this.value;       
     }
     
 }
