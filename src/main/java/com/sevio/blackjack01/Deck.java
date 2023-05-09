@@ -68,6 +68,10 @@ public class Deck {
         vindoDe.removerCarta(0); // Removendo a Carta de onde está vindo
     }
     
+    public int tamanhoDoDeck() {
+        return this.cartas.size();
+    }
+    
     // Retorna o valor total das cartas no deck
     public int valorDasCartas() {
         int valorTotal = 0;
@@ -102,6 +106,8 @@ public class Deck {
            }
            
        }
+       
+       return valorTotal;
     }
     
     public String toString() {
