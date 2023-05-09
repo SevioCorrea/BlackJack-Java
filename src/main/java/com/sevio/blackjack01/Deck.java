@@ -72,6 +72,19 @@ public class Deck {
         return this.cartas.size();
     }
     
+    public void moverTudoParaDeck(Deck moverPara) {
+        int thisTamanhoDoDeck = this.cartas.size(); // ToDo: Melhorar o nome
+        
+        // Colocar cartas no Deck moverPara
+        for(int i = 0; i < thisTamanhoDoDeck; i++) {
+            moverPara.addCarta(this.getCarta(i));
+        }
+        
+        for(int i=0; i < thisTamanhoDoDeck; i++) {
+            this.removerCarta(0);
+        }
+    }
+    
     // Retorna o valor total das cartas no deck
     public int valorDasCartas() {
         int valorTotal = 0;
