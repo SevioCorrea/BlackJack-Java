@@ -154,3 +154,22 @@ O método `main` é o ponto de entrada do programa.
      - Limpeza dos decks e exibição de mensagem de fim de jogo.
 
 5. Exibe a mensagem de fim de jogo quando o jogador fica sem dinheiro.
+
+# Testes
+
+## Classe `DeckTest`:
+
+1. `testCriarDeckCompleto()`: Este teste verifica se o método `criarDeckCompleto()` da classe `Deck` cria um baralho completo com 52 cartas. Ele cria uma instância de `Deck`, chama o método `criarDeckCompleto()` e em seguida verifica se o tamanho do deck é igual a 52 usando `Assertions.assertEquals()`.
+
+2. `testEmbaralhar()`: Este teste verifica se o método `embaralhar()` da classe `Deck` embaralha o deck de forma efetiva. Ele cria duas instâncias de `Deck`, uma antes do embaralhamento (`deck`) e outra após o embaralhamento (`deckEmbaralhado`). Ambos os decks são criados com o método `criarDeckCompleto()`. Em seguida, o método `embaralhar()` é chamado em `deckEmbaralhado`. O teste verifica se a representação em forma de String dos dois decks é diferente usando `Assertions.assertNotEquals()`.
+
+3. `testValorDasCartas()`: Este teste verifica se o método `valorDasCartas()` da classe `Deck` calcula corretamente o valor das cartas no deck. Ele cria uma instância de `Deck`, adiciona três cartas com valores conhecidos (AS, DAMA e CINCO) e chama o método `valorDasCartas()`. O teste verifica se o valor retornado é igual a 16 usando `Assertions.assertEquals()`.
+
+4. `testMoverTudoParaDeck()`: Este teste verifica se o método `moverTudoParaDeck()` da classe `Deck` move todas as cartas de um deck para outro corretamente. Ele cria duas instâncias de `Deck` (`deck1` e `deck2`) e adiciona duas cartas em `deck1`. Em seguida, o método `moverTudoParaDeck()` é chamado para mover as cartas de `deck1` para `deck2`. O teste verifica se o tamanho de `deck1` é igual a 0 e o tamanho de `deck2` é igual a 2 usando `Assertions.assertEquals()`.
+
+
+## Classe `Carta`:
+
+1. `testToString()`: Este teste verifica se o método `toString()` da classe `Carta` retorna a representação correta da carta como uma String. Ele cria uma instância de `Carta` com o naipe `COPAS` e o valor `AS`. Em seguida, compara a saída do método `toString()` com a String esperada, que é "COPAS-AS".
+
+2. `testGetValue()`: Este teste verifica se o método `getValue()` da classe `Carta` retorna o valor correto da carta. Ele cria uma instância de `Carta` com o naipe `PAUS` e o valor `DAMA`. Em seguida, compara o valor retornado pelo método `getValue()` com o valor esperado, que é `DAMA`.
