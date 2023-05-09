@@ -58,7 +58,7 @@ public class Blackjack {
                 System.out.println("O valor da sua mão é de: " + deckDoJogador.valorDasCartas());
                 
                 // Mão do Dealer
-                System.out.println("Mão do Dealer: " + dealerDeck.getCarta(0).toString() + "e [Oculto]");
+                System.out.println("Mão do Dealer: " + dealerDeck.getCarta(0).toString() + " e [Oculto]");
                 
                 // O que o jogador quer fazer
                 System.out.println("O que você quer fazer? (1) para bater, (2) para continuar.");
@@ -118,6 +118,16 @@ public class Blackjack {
                 dinheiroDoJogador += apostaDoJogador;
                 fimDoRound = true;
             }
+            
+            else if(fimDoRound == false) {
+                System.out.println("Você perdeu a mão.");
+                dinheiroDoJogador -= apostaDoJogador;
+                fimDoRound = true;
+            }
+            
+            deckDoJogador.moverTudoParaDeck(deckDeJogo);
+            dealerDeck.moverTudoParaDeck(deckDeJogo);
+            System.out.println("Fim de Jogo.");
             
         }
         System.out.println("Fim de Jogo! Você está sem dinheiro.");
