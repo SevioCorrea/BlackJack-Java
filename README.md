@@ -168,7 +168,7 @@ O método `main` é o ponto de entrada do programa.
 4. `testMoverTudoParaDeck()`: Este teste verifica se o método `moverTudoParaDeck()` da classe `Deck` move todas as cartas de um deck para outro corretamente. Ele cria duas instâncias de `Deck` (`deck1` e `deck2`) e adiciona duas cartas em `deck1`. Em seguida, o método `moverTudoParaDeck()` é chamado para mover as cartas de `deck1` para `deck2`. O teste verifica se o tamanho de `deck1` é igual a 0 e o tamanho de `deck2` é igual a 2 usando `Assertions.assertEquals()`.
 
 
-## Classe `Carta`:
+## Classe `CartaTest`:
 
 1. `testToString()`: Este teste verifica se o método `toString()` da classe `Carta` retorna a representação correta da carta como uma String. Ele cria uma instância de `Carta` com o naipe `COPAS` e o valor `AS`. Em seguida, compara a saída do método `toString()` com a String esperada, que é "COPAS-AS".
 
